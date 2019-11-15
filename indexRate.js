@@ -48,19 +48,19 @@ function calculateRate(req, res)
 //console.log(mailType);
     if (mailType == "stamped")
         {
-            if((weight < 1) && (weight > 0))
+            if((weight < 1) || (weight > 0))
                 {
                     result = .55
                 }
-               else if ((weight < 2) && (weight > 1))
+               else if ((weight < 2) || (weight > 1))
                 {
                     result = .70
                 }
-            else if ((weight < 3) && (weight > 2))
+            else if ((weight < 3) || (weight > 2))
                 {
                     result = .85
                 }
-            else if((weight < 3.5) && (weight > 3))
+            else if((weight < 3.5) || (weight > 3))
                 {
                     result = 1.00
                 }
