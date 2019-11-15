@@ -45,7 +45,10 @@ function calculateRate(request, response)
 
     let result = 0
 
-    if (mailType == "stamped")
+    res.write(weight);
+    res.write(mailType);
+
+    /*if (mailType == "stamped")
         {
             if((weight < 1) && (weight > 0))
                 {
@@ -69,10 +72,10 @@ function calculateRate(request, response)
                 }
         }//end if stamped
 
-
+*/
     const params = {mailType: mailType, stamped: stamped, result: result };
 
-    res.write(result);
+    //res.write(result);
 
 
 }
