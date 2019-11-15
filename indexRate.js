@@ -37,10 +37,10 @@ const pool = new Pool({
                 console.log(`Listening on`, PORT);
              });
 
-function calculateRate(request, response)
+function calculateRate(req, res)
 {
-    let weight = Number(request.query.weight);
-    let mailType = request.query.mailType;
+    let weight = Number(req.query.weight);
+    let mailType = req.query.mailType;
     mailType = mailType.toLowerCase();
 
     let result = 0
