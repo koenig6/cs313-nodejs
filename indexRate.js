@@ -144,11 +144,7 @@ function calculateRate(req, res)
                 }//end switch
         }//end else if flat
 
-
-
     const params = {mailType: mailType, weight: weight, result: result };
 
     res.render('pages/getRate', params);
-
-
 }
