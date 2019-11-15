@@ -43,9 +43,9 @@ function calculateRate(req, res)
     let mailType = req.query.mailType;
     mailType = mailType.toLowerCase();
 
-    let result = 0
+    let result = 0;
 
-console.log(mailType);
+//console.log(mailType);
     if (mailType == "stamped")
         {
             if((weight < 1) && (weight > 0))
@@ -66,12 +66,12 @@ console.log(mailType);
                 }
             else (weight > 3.5)
                 {
-                    result = "Your evelope is too large for stamped mail pricing.  Please select Flats to get your correct rate."
+                    result = "Your envelope is too large for stamped mail pricing.  Please select Flats to get your correct rate."
                 }
         }//end if stamped
 
 
-    const params = {mailType: mailType, stamped: stamped, result: result };
+    const params = {mailType: mailType, weight: weight, result: result };
 
     res.render('pages/getRate', params);
 
