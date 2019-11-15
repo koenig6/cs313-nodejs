@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <title>CIT 261</title>
+    </head>
+    <body>
+    <h1> Postal Rate Calculator</h1>
+        <form action="/postalRateCalc" method="get">
+              Weight of mail:<br>
+              <input type="text" name="weight">
+              <br>
+            <select name="mailType">
+                  <option>Stamped</option>
+                  <option>Metered</option>
+                  <option>Flats</option>
+                  <option>Retail</option>
+            </select>
+
+              <br><br>
+              <input type="submit" value="Get Cost">
+        </form>
+    </body>
+</html>
