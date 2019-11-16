@@ -42,10 +42,10 @@ function calculateRate(req, res)
                     result = 1.00;
                     break;
                  case weight > 3.5:
-                    res.write( " - Your envelope is too large.  Please select Flat for mail type.");
+                    result = " - Your envelope is too large.  Please select Flat for mail type.";
                     break;
                 default:
-                    result = 99;
+                    result = 0;
             }//end switch
         }//end if stamped
 
