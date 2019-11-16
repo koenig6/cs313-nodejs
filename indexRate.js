@@ -144,6 +144,30 @@ function calculateRate(req, res)
                 }//end switch
         }//end else if flat
 
+    else if(mailType == "retail")
+        {
+           switch(true)
+                {
+                    case weight <=4 && weight > 0:
+                        result = 3.66;
+                        break;
+                    case weight <= 8 && weight > 4:
+                        result = 4.39;
+                        break;
+                     case weight <= 12 && weight > 8:
+                        result = 5.19;
+                        break;
+                    case weight <= 13 && weight > 12:
+                        result = 5.71;
+                        break;
+                    case weight > 14:
+                        result = " This is not the best shipping option for you.";
+                        break;
+                    default:
+                        result = 0;
+                }//end switch
+        }//end else if retail
+
     const params = {mailType: mailType, weight: weight, result: result };
 
     res.render('pages/getRate', params);
